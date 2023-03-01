@@ -12,7 +12,6 @@ class AppCoordinator {
 	private let navigationController: UINavigationController
 	
 	init(navigationController: UINavigationController) {
-		
 		self.navigationController = navigationController
 	}
 	
@@ -21,7 +20,7 @@ class AppCoordinator {
 		self.navigationController.navigationBar.titleTextAttributes = textAttributes
 		self.navigationController.navigationBar.barTintColor = UIColor(named: "Custom_Orange")
 
-		self.navigateToList()
+		self.navigateToLogin()
 	}
 	
 	private func navigateToLogin() {

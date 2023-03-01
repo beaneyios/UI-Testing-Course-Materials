@@ -16,6 +16,7 @@ struct MovieListCellModel {
 
 class MovieListCell: UICollectionViewCell {
 
+	@IBOutlet weak var containerView: UIView!
 	@IBOutlet weak var poster: UIImageView!
 	@IBOutlet weak var titleLabel: UILabel!
 	@IBOutlet weak var plotLabel: UILabel!
@@ -24,15 +25,22 @@ class MovieListCell: UICollectionViewCell {
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
-				
-		self.layer.cornerRadius = 12.0
-		self.clipsToBounds = true
-		
+						
 		self.poster.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
 		self.poster.layer.shadowColor = UIColor.black.cgColor
 		self.poster.layer.shadowRadius = 0.0
 		self.poster.layer.shadowOpacity = 0.5
 		self.poster.clipsToBounds = false
+		
+		self.layer.backgroundColor = UIColor.clear.cgColor
+		self.layer.shadowColor = UIColor.black.cgColor
+		self.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+		self.layer.shadowOpacity = 0.5
+		self.layer.shadowRadius = 2.0
+		self.layer.masksToBounds = false
+		
+		self.containerView.clipsToBounds = true
+		self.containerView.layer.cornerRadius = 12.0
 	}
 	
 	override func prepareForReuse() {

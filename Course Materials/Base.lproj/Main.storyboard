@@ -133,11 +133,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yG-JB-LkF">
-                                <rect key="frame" x="16" y="75" width="361" height="727"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yG-JB-LkF">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
-                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tCo-iM-MWv">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="727"/>
+                                    <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tCo-iM-MWv">
+                                        <rect key="frame" x="6" y="0.0" width="381" height="759"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CRs-1f-9Og">
                                             <size key="itemSize" width="128" height="128"/>
@@ -151,19 +151,19 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="tCo-iM-MWv" secondAttribute="bottom" id="HL1-iE-ngR"/>
-                                    <constraint firstItem="tCo-iM-MWv" firstAttribute="leading" secondItem="5yG-JB-LkF" secondAttribute="leading" id="V4V-p4-pgh"/>
+                                    <constraint firstItem="tCo-iM-MWv" firstAttribute="leading" secondItem="5yG-JB-LkF" secondAttribute="leading" constant="6" id="V4V-p4-pgh"/>
                                     <constraint firstItem="tCo-iM-MWv" firstAttribute="top" secondItem="5yG-JB-LkF" secondAttribute="top" id="jut-ox-UVu"/>
-                                    <constraint firstAttribute="trailing" secondItem="tCo-iM-MWv" secondAttribute="trailing" id="qau-Nr-wlP"/>
+                                    <constraint firstAttribute="trailing" secondItem="tCo-iM-MWv" secondAttribute="trailing" constant="6" id="qau-Nr-wlP"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YNv-D3-npz"/>
                         <color key="backgroundColor" red="0.90196078431372551" green="0.4823529411764706" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="5yG-JB-LkF" firstAttribute="leading" secondItem="YNv-D3-npz" secondAttribute="leading" constant="16" id="K30-sp-1Uw"/>
-                            <constraint firstItem="YNv-D3-npz" firstAttribute="bottom" secondItem="5yG-JB-LkF" secondAttribute="bottom" constant="16" id="OJA-ff-y9l"/>
-                            <constraint firstItem="5yG-JB-LkF" firstAttribute="top" secondItem="YNv-D3-npz" secondAttribute="top" constant="16" id="Rcd-Zr-WPv"/>
-                            <constraint firstItem="YNv-D3-npz" firstAttribute="trailing" secondItem="5yG-JB-LkF" secondAttribute="trailing" constant="16" id="zG3-I1-Wnq"/>
+                            <constraint firstItem="5yG-JB-LkF" firstAttribute="leading" secondItem="YNv-D3-npz" secondAttribute="leading" id="K30-sp-1Uw"/>
+                            <constraint firstItem="YNv-D3-npz" firstAttribute="bottom" secondItem="5yG-JB-LkF" secondAttribute="bottom" id="OJA-ff-y9l"/>
+                            <constraint firstItem="5yG-JB-LkF" firstAttribute="top" secondItem="YNv-D3-npz" secondAttribute="top" id="Rcd-Zr-WPv"/>
+                            <constraint firstItem="YNv-D3-npz" firstAttribute="trailing" secondItem="5yG-JB-LkF" secondAttribute="trailing" id="zG3-I1-Wnq"/>
                         </constraints>
                     </view>
                     <connections>
