@@ -12,9 +12,9 @@ class MovieListViewModel {
 	@Published var cellModels: [MovieListCellModel] = []
 	private var movies = [Movie]()
 	
-	private let downloader: MovieListDownloader
+	private let downloader: MovieListGateway
 	
-	init(downloader: MovieListDownloader) {
+	init(downloader: MovieListGateway) {
 		self.downloader = downloader
 	}
 	

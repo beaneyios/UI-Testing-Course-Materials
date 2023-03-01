@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieListDownloader {
+struct MovieListGateway {
 	
 	let requestFactory: RequestFactory
 	let networkManager: NetworkManager

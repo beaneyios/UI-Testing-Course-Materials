@@ -22,6 +22,11 @@ struct RequestFactory {
 		
 		var request = URLRequest(url: url)
 		request.httpMethod = method.rawValue
+		
+		if let body = endpoint.body {
+			request.httpBody = body
+		}
+		
 		return request
 	}
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 class LoginViewController: UIViewController {
 	
@@ -18,9 +19,15 @@ class LoginViewController: UIViewController {
 	
 	@IBOutlet var signInBtn: UIButton!
 	
+	var viewModel: LoginViewModel!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.styleSubViews()
+	}
+	
+	@IBAction func didTapSignIn(_ sender: Any) {
+		self.viewModel.login()
 	}
 	
 	private func styleSubViews() {
@@ -36,5 +43,14 @@ class LoginViewController: UIViewController {
 		self.signInBtn.backgroundColor = .red
 		self.signInBtn.tintColor = .white
 		self.signInBtn.layer.cornerRadius = 12.0
+	}
+}
+
+extension UITextField {
+	func textPublisher() -> AnyPublisher<String, Never> {
+		NotificationCenter.default
+			.publisher(for: UITextField.textDidChangeNotification, object: self)
+			.map { ($0.object as? UITextField)?.text  ?? "" }
+			.eraseToAnyPublisher()
 	}
 }

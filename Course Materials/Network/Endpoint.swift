@@ -10,12 +10,26 @@ import Foundation
 enum Endpoint {
 	
 	case movieList
+	case login(LoginRequest)
 	
 	var path: String {
 		
 		switch self {
 		case .movieList:
 			return "/movies.json"
+		case .login(_):
+			return "/login.json"
+		}
+	}
+	
+	var body: Data? {
+		
+		switch self {
+		case let .login(request):			
+			let jsonEncoder = JSONEncoder()
+			return try? jsonEncoder.encode(request)
+		default:
+			return nil
 		}
 	}
 }

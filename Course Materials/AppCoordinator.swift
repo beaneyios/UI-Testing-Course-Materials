@@ -33,6 +33,13 @@ class AppCoordinator {
 			return
 		}
 		
+		viewController.viewModel = LoginViewModel(
+			gateway: LoginGateway(
+				requestFactory: RequestFactory(baseUrl: BaseUrlManager.baseUrl),
+				networkManager: NetworkManager()
+			),
+			delegate: self
+		)
 		self.navigationController.setViewControllers([viewController], animated: true)
 	}
 	
@@ -47,7 +54,7 @@ class AppCoordinator {
 		}
 		
 		let viewModel = MovieListViewModel(
-			downloader: MovieListDownloader(
+			downloader: MovieListGateway(
 				requestFactory: RequestFactory(baseUrl: BaseUrlManager.baseUrl),
 				networkManager: NetworkManager()
 			)
@@ -56,5 +63,12 @@ class AppCoordinator {
 		viewController.title = "Your movies"
 		viewController.viewModel = viewModel		
 		self.navigationController.setViewControllers([viewController], animated: true)
+	}
+}
+
+extension AppCoordinator: LoginPageDelegate {
+	
+	func loginPageDidLogIn() {
+		self.navigateToList()
 	}
 }
