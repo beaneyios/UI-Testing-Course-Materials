@@ -16,8 +16,12 @@ class AppCoordinator {
 		self.navigationController = navigationController
 	}
 	
-	func start() {		
-		self.navigateToLogin()
+	func start() {
+		let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+		self.navigationController.navigationBar.titleTextAttributes = textAttributes
+		self.navigationController.navigationBar.barTintColor = UIColor(named: "Custom_Orange")
+
+		self.navigateToList()
 	}
 	
 	private func navigateToLogin() {
@@ -30,6 +34,28 @@ class AppCoordinator {
 			return
 		}
 		
+		self.navigationController.setViewControllers([viewController], animated: true)
+	}
+	
+	private func navigateToList() {
+		
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		
+		guard
+			let viewController = storyboard.instantiateViewController(withIdentifier: "MovieListViewController") as? MovieListViewController
+		else {
+			return
+		}
+		
+		let viewModel = MovieListViewModel(
+			downloader: MovieListDownloader(
+				requestFactory: RequestFactory(baseUrl: BaseUrlManager.baseUrl),
+				networkManager: NetworkManager()
+			)
+		)
+		
+		viewController.title = "Your movies"
+		viewController.viewModel = viewModel		
 		self.navigationController.setViewControllers([viewController], animated: true)
 	}
 }
