@@ -37,9 +37,6 @@ class LoginViewModel {
 	@MainActor
 	func login() {
 		
-		self.delegate?.loginPageDidLogIn()
-		return;
-		
 		Task {
 			do {
 				let response = try await self.gateway.login(

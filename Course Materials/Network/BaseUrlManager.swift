@@ -10,6 +10,6 @@ import Foundation
 struct BaseUrlManager {
 	
 	static var baseUrl: String {
-		"https://beaneyios.github.io/"
+		"https://beaneyios.github.io"
 	}
 }

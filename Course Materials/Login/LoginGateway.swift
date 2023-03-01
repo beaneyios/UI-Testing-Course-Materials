@@ -17,7 +17,7 @@ struct LoginGateway {
 		let loginRequest = LoginRequest(username: username, password: password)
 		let request = try requestFactory.request(
 			for: .login(loginRequest),
-			method: .post
+			method: .get
 		)
 		
 		return try await self.networkManager.performRequest(request)

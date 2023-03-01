@@ -24,6 +24,8 @@ enum Endpoint {
 	
 	var body: Data? {
 		
+		return nil;
+		
 		switch self {
 		case let .login(request):			
 			let jsonEncoder = JSONEncoder()
