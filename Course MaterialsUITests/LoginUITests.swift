@@ -35,6 +35,8 @@ final class LoginUITests: XCTestCase {
 		// More on that in a later chapter.
 		let listView = app.otherElements["com.uitest.list.view"]
 		let listViewFound = listView.waitForExistence(timeout: 2.0)
+		
+		// We use an assertion to ensure the view was found.
 		XCTAssertTrue(listViewFound)
     }
 }
