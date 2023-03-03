@@ -20,7 +20,8 @@ class MovieListViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+		self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
 		self.configureCollectionView()
 		self.bindToViewModel()
 		self.viewModel.loadData()
@@ -91,5 +92,12 @@ extension MovieListViewController: UICollectionViewDataSource, UICollectionViewD
 	) -> CGSize {
 		
 		CGSize(width: collectionView.frame.width, height: 180.0)
+	}
+	
+	func collectionView(
+		_ collectionView: UICollectionView,
+		didSelectItemAt indexPath: IndexPath
+	) {
+		self.viewModel.didSelectMovie(at: indexPath)
 	}
 }

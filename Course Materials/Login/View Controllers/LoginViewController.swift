@@ -10,7 +10,7 @@ import Combine
 
 class LoginViewController: UIViewController {
 	
-	@IBOutlet var container: UIView!
+	@IBOutlet var containerView: UIView!
 	
 	@IBOutlet var logo: UIImageView!
 	
@@ -35,11 +35,7 @@ class LoginViewController: UIViewController {
 	private func styleSubViews() {
 		
 		// Style container
-		self.container.layer.cornerRadius = 12.0
-		self.container.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
-		self.container.layer.shadowColor = UIColor.black.cgColor
-		self.container.layer.shadowRadius = 1.0
-		self.container.layer.shadowOpacity = 0.7
+		self.containerView.addShadow()
 		
 		// Style sign in button
 		self.signInBtn.backgroundColor = .red

@@ -15,12 +15,16 @@ class AppCoordinator {
 		self.navigationController = navigationController
 	}
 	
-	func start() {
+	func start() {		
+		self.styleNavigationBar()
+		self.navigateToLogin()
+	}
+	
+	private func styleNavigationBar() {
 		let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
 		self.navigationController.navigationBar.titleTextAttributes = textAttributes
 		self.navigationController.navigationBar.barTintColor = UIColor(named: "Custom_Orange")
-
-		self.navigateToLogin()
+		self.navigationController.navigationBar.tintColor = .white
 	}
 	
 	private func navigateToLogin() {
@@ -57,12 +61,28 @@ class AppCoordinator {
 			downloader: MovieListGateway(
 				requestFactory: RequestFactory(baseUrl: BaseUrlManager.baseUrl),
 				networkManager: NetworkManager()
-			)
+			),
+			delegate: self
 		)
 		
 		viewController.title = "Your movies"
 		viewController.viewModel = viewModel		
 		self.navigationController.setViewControllers([viewController], animated: true)
+	}
+	
+	private func navigateToMovie(_ movie: Movie) {
+		
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		
+		guard
+			let viewController = storyboard.instantiateViewController(withIdentifier: "MovieDetailViewController") as? MovieDetailViewController
+		else {
+			return
+		}
+
+		viewController.title = movie.title
+		viewController.movie = movie
+		self.navigationController.pushViewController(viewController, animated: true)
 	}
 }
 
@@ -70,5 +90,12 @@ extension AppCoordinator: LoginPageDelegate {
 	
 	func loginPageDidLogIn() {
 		self.navigateToList()
+	}
+}
+
+extension AppCoordinator: MovieListDelegate {
+	
+	func movieListDidSelectMovie(_ movie: Movie) {
+		self.navigateToMovie(movie)
 	}
 }

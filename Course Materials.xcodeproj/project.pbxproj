@@ -15,9 +15,10 @@
 		E95D22D929AD477700D1E682 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22D829AD477700D1E682 /* LoginViewController.swift */; };
 		E95D22E529AE9E1500D1E682 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22E429AE9E1500D1E682 /* AppCoordinator.swift */; };
 		E95D22E729AE9F2E00D1E682 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22E629AE9F2E00D1E682 /* MovieListViewController.swift */; };
-		E95D22E929AE9F3900D1E682 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22E829AE9F3900D1E682 /* DetailViewController.swift */; };
+		E95D22E929AE9F3900D1E682 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22E829AE9F3900D1E682 /* MovieDetailViewController.swift */; };
 		E95D22EF29AE9FD000D1E682 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22ED29AE9FD000D1E682 /* MovieListCell.swift */; };
 		E95D22F029AE9FD000D1E682 /* MovieListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E95D22EE29AE9FD000D1E682 /* MovieListCell.xib */; };
+		E962535529B293E000ECEC5B /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962535429B293E000ECEC5B /* UIView+Shadow.swift */; };
 		E99C59CF29AFD97000173691 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59CE29AFD97000173691 /* Movie.swift */; };
 		E99C59D129AFD9B400173691 /* MovieListGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D029AFD9B400173691 /* MovieListGateway.swift */; };
 		E99C59D429AFD9F700173691 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D329AFD9F700173691 /* Endpoint.swift */; };
@@ -57,9 +58,10 @@
 		E95D22D829AD477700D1E682 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E95D22E429AE9E1500D1E682 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		E95D22E629AE9F2E00D1E682 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
-		E95D22E829AE9F3900D1E682 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E95D22E829AE9F3900D1E682 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		E95D22ED29AE9FD000D1E682 /* MovieListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
 		E95D22EE29AE9FD000D1E682 /* MovieListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListCell.xib; sourceTree = "<group>"; };
+		E962535429B293E000ECEC5B /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		E99C59CE29AFD97000173691 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E99C59D029AFD9B400173691 /* MovieListGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListGateway.swift; sourceTree = "<group>"; };
 		E99C59D329AFD9F700173691 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -116,18 +118,19 @@
 		E95D22A729AD475600D1E682 /* Course Materials */ = {
 			isa = PBXGroup;
 			children = (
-				E99C59D229AFD9E800173691 /* Network */,
-				E99C59CD29AFD96300173691 /* Models */,
-				E95D22EC29AE9FB600D1E682 /* Login */,
-				E95D22EA29AE9FAE00D1E682 /* List */,
-				E95D22EB29AE9FB200D1E682 /* Detail */,
-				E95D22A829AD475600D1E682 /* AppDelegate.swift */,
-				E95D22AA29AD475600D1E682 /* SceneDelegate.swift */,
-				E95D22AE29AD475600D1E682 /* Main.storyboard */,
-				E95D22B129AD475600D1E682 /* Assets.xcassets */,
-				E95D22B329AD475600D1E682 /* LaunchScreen.storyboard */,
-				E95D22B629AD475600D1E682 /* Info.plist */,
+				E962535229B293D400ECEC5B /* Shared */,
 				E95D22E429AE9E1500D1E682 /* AppCoordinator.swift */,
+				E95D22A829AD475600D1E682 /* AppDelegate.swift */,
+				E95D22B129AD475600D1E682 /* Assets.xcassets */,
+				E95D22B629AD475600D1E682 /* Info.plist */,
+				E95D22B329AD475600D1E682 /* LaunchScreen.storyboard */,
+				E95D22AE29AD475600D1E682 /* Main.storyboard */,
+				E95D22EB29AE9FB200D1E682 /* Detail */,
+				E95D22EA29AE9FAE00D1E682 /* List */,
+				E95D22EC29AE9FB600D1E682 /* Login */,
+				E99C59CD29AFD96300173691 /* Models */,
+				E99C59D229AFD9E800173691 /* Network */,
+				E95D22AA29AD475600D1E682 /* SceneDelegate.swift */,
 			);
 			path = "Course Materials";
 			sourceTree = "<group>";
@@ -154,7 +157,7 @@
 		E95D22EB29AE9FB200D1E682 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				E95D22E829AE9F3900D1E682 /* DetailViewController.swift */,
+				E962534D29B2937A00ECEC5B /* View Controllers */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -162,13 +165,69 @@
 		E95D22EC29AE9FB600D1E682 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				E962535129B2939C00ECEC5B /* Models */,
+				E962535029B2939400ECEC5B /* Gateways */,
+				E962534F29B2938D00ECEC5B /* View Models */,
+				E962534E29B2938500ECEC5B /* View Controllers */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E962534D29B2937A00ECEC5B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E95D22E829AE9F3900D1E682 /* MovieDetailViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E962534E29B2938500ECEC5B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				E95D22D829AD477700D1E682 /* LoginViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E962534F29B2938D00ECEC5B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
 				E99C59E429AFE96B00173691 /* LoginViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		E962535029B2939400ECEC5B /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
 				E99C59E629AFE98C00173691 /* LoginGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		E962535129B2939C00ECEC5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				E99C59E829AFE9FD00173691 /* LoginRequest.swift */,
 				E99C59EA29AFEAB200173691 /* LoginResponse.swift */,
 			);
-			path = Login;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E962535229B293D400ECEC5B /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E962535329B293D800ECEC5B /* Extensions */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		E962535329B293D800ECEC5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E962535429B293E000ECEC5B /* UIView+Shadow.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E99C59CD29AFD96300173691 /* Models */ = {
@@ -332,6 +391,7 @@
 				E95D22E529AE9E1500D1E682 /* AppCoordinator.swift in Sources */,
 				E99C59DB29AFDA9500173691 /* HttpMethod.swift in Sources */,
 				E99C59E929AFE9FD00173691 /* LoginRequest.swift in Sources */,
+				E962535529B293E000ECEC5B /* UIView+Shadow.swift in Sources */,
 				E99C59DD29AFDB2200173691 /* MovieListViewModel.swift in Sources */,
 				E95D22D929AD477700D1E682 /* LoginViewController.swift in Sources */,
 				E95D22A929AD475600D1E682 /* AppDelegate.swift in Sources */,
@@ -340,7 +400,7 @@
 				E99C59D429AFD9F700173691 /* Endpoint.swift in Sources */,
 				E99C59E529AFE96B00173691 /* LoginViewModel.swift in Sources */,
 				E99C59E129AFDFDD00173691 /* BaseUrlManager.swift in Sources */,
-				E95D22E929AE9F3900D1E682 /* DetailViewController.swift in Sources */,
+				E95D22E929AE9F3900D1E682 /* MovieDetailViewController.swift in Sources */,
 				E95D22E729AE9F2E00D1E682 /* MovieListViewController.swift in Sources */,
 				E99C59CF29AFD97000173691 /* Movie.swift in Sources */,
 				E99C59D929AFDA7000173691 /* NetworkError.swift in Sources */,
