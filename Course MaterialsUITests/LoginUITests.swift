@@ -28,26 +28,13 @@ final class LoginUITests: XCTestCase {
 		// Now tap the button
 		let button = app.buttons["com.uitest.login.button"]
 		button.tap()
-    }
-}
-
-extension XCUIElement {
-	
-	func clearAndEnterText(text: String) {
 		
-		guard let stringValue = self.value as? String else {
-			XCTFail("Tried to clear and enter text into a non string value")
-			return
-		}
-
-		self.tap()
-
-		let deleteString = String(
-			repeating: XCUIKeyboardKey.delete.rawValue,
-			count: stringValue.count
-		)
-
-		self.typeText(deleteString)
-		self.typeText(text)
-	}
+		// Now we just need to wait for the list view to appear.
+		// NOTE: See how we're applying a generous timeout of 2 seconds?
+		// That's to allow for the network request to complete.
+		// More on that in a later chapter.
+		let listView = app.otherElements["com.uitest.list.view"]
+		let listViewFound = listView.waitForExistence(timeout: 2.0)
+		XCTAssertTrue(listViewFound)
+    }
 }
