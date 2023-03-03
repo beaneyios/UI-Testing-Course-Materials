@@ -50,11 +50,11 @@ class MovieListCell: UICollectionViewCell {
 	
 	func bindViewModel(_ viewModel: MovieListCellModel) {
 		
-		
-		
 		self.titleLabel.text = viewModel.titleText
 		self.plotLabel.text = viewModel.plotText
 		self.bindImage(viewModel: viewModel)
+		
+		self.configureAccessibility(titleText: viewModel.titleText)
 	}
 	
 	private func bindImage(viewModel: MovieListCellModel) {
@@ -84,5 +84,10 @@ class MovieListCell: UICollectionViewCell {
 		}
 		
 		self.task?.resume()
+	}
+	
+	private func configureAccessibility(titleText: String) {
+
+		self.titleLabel.accessibilityLabel = "\(titleText)"
 	}
 }
