@@ -12,8 +12,6 @@
 		E95D22B029AD475600D1E682 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E95D22AE29AD475600D1E682 /* Main.storyboard */; };
 		E95D22B229AD475600D1E682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95D22B129AD475600D1E682 /* Assets.xcassets */; };
 		E95D22B529AD475600D1E682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E95D22B329AD475600D1E682 /* LaunchScreen.storyboard */; };
-		E95D22CA29AD475700D1E682 /* Course_MaterialsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22C929AD475700D1E682 /* Course_MaterialsUITests.swift */; };
-		E95D22CC29AD475700D1E682 /* Course_MaterialsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22CB29AD475700D1E682 /* Course_MaterialsUITestsLaunchTests.swift */; };
 		E95D22D929AD477700D1E682 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22D829AD477700D1E682 /* LoginViewController.swift */; };
 		E95D22E529AE9E1500D1E682 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22E429AE9E1500D1E682 /* AppCoordinator.swift */; };
 		E95D22E729AE9F2E00D1E682 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22E629AE9F2E00D1E682 /* MovieListViewController.swift */; };
@@ -56,8 +54,6 @@
 		E95D22B429AD475600D1E682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E95D22B629AD475600D1E682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E95D22C529AD475700D1E682 /* Course MaterialsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Course MaterialsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E95D22C929AD475700D1E682 /* Course_MaterialsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_MaterialsUITests.swift; sourceTree = "<group>"; };
-		E95D22CB29AD475700D1E682 /* Course_MaterialsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_MaterialsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E95D22D829AD477700D1E682 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E95D22E429AE9E1500D1E682 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		E95D22E629AE9F2E00D1E682 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
@@ -140,8 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				E99C59FF29B28B8400173691 /* LoginUITests.swift */,
-				E95D22C929AD475700D1E682 /* Course_MaterialsUITests.swift */,
-				E95D22CB29AD475700D1E682 /* Course_MaterialsUITestsLaunchTests.swift */,
 			);
 			path = "Course MaterialsUITests";
 			sourceTree = "<group>";
@@ -362,8 +356,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E95D22CC29AD475700D1E682 /* Course_MaterialsUITestsLaunchTests.swift in Sources */,
-				E95D22CA29AD475700D1E682 /* Course_MaterialsUITests.swift in Sources */,
 				E99C5A0129B28BFA00173691 /* LoginUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
