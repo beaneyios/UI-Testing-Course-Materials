@@ -15,15 +15,8 @@ final class ListUITests: XCTestCase {
 		let app = XCUIApplication()
 		app.launch()
 		
-		/// Find the username textfield on the screen and enter a password
-		let usernameTextField = app.textFields["com.uitest.login.textfield.username"]
-		usernameTextField.tap()
-		usernameTextField.typeText("test@test.com")
-		
-		/// Find the password field on the screen and enter a password
-		let passwordTextField = app.secureTextFields["com.uitest.login.textfield.password"]
-		passwordTextField.tap()
-		passwordTextField.typeText("testPassword123")
+		let loginScreen = LoginScreen(app: app)
+		loginScreen.login(username: "test@test.com", password: "testPassword123")
 		
 		/// Now tap the button
 		let button = app.buttons["com.uitest.login.button"]
