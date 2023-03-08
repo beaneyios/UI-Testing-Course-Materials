@@ -7,8 +7,9 @@
 
 import XCTest
 import Shock
+import iOSSnapshotTestCase
 
-class MockedUITests: XCTestCase {
+class MockedUITests: FBSnapshotTestCase {
 	
 	var mockServer: MockServer!
 	
@@ -41,5 +42,36 @@ class MockedUITests: XCTestCase {
 		
 		self.mockServer.setup(route: loginRoute)
 		self.mockServer.setup(route: listRoute)
+	}
+}
+
+// Snapshot testing
+extension MockedUITests {
+	
+	func verify(
+		identifier: String,
+		app: XCUIApplication,
+		file: StaticString = #file,
+		line: UInt = #line
+	) {
+		
+		guard let croppedImage = app.screenshot().image.removingStatusBar else {
+			
+			XCTFail(
+				"An error occurred while cropping the screenshot",
+				file: file,
+				line: line
+			)
+			
+			return
+		}
+		
+		let imageView = UIImageView(image: croppedImage)
+		
+		FBSnapshotVerifyView(
+			imageView,
+			identifier: "\(Self.self)-\(identifier)",
+			overallTolerance: 0.1
+		)
 	}
 }

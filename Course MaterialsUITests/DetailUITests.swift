@@ -11,6 +11,8 @@ final class DetailUITests: MockedUITests {
 
 	func testDetail() throws {
 		
+		self.recordMode = false
+		
 		/// Set up the application and launch it.
 		let app = XCUIApplication()
 		app.launchWithTestEnvironment()
@@ -30,12 +32,6 @@ final class DetailUITests: MockedUITests {
 		let detailScreen = DetailScreen(app: app)
 		detailScreen.waitForScreen()
 		
-		XCTAssertEqual(detailScreen.titleLabel(), "Beetlejuice")
-		XCTAssertEqual(
-			detailScreen.subtitleLabel(),
-			"A couple of recently deceased ghosts contract the services of a \"bio-exorcist\" in order to remove the obnoxious new owners of their house."
-		)
-		XCTAssertEqual(detailScreen.actorLabel(), "Alec Baldwin, Geena Davis, Annie McEnroe, Maurice Page")
-		XCTAssertEqual(detailScreen.runTimeLabel(), "92")
+		self.verify(identifier: "Detail-View", app: app)
 	}
 }

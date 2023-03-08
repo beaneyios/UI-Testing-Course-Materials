@@ -60,6 +60,28 @@
             ReferencedContainer = "container:Course Materials.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "IMAGE_DIFF_DIR"
+            value = "$(SOURCE_ROOT)/$(PROJECT_NAME)UITests/Screenshots/FailureDiffs"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "DEBUG_DIR"
+            value = "$(SOURCE_ROOT)/$(PROJECT_NAME)UITests/Screenshots/Debug"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "FB_REFERENCE_IMAGE_DIR"
+            value = "$(SOURCE_ROOT)/$(PROJECT_NAME)UITests/Screenshots/ReferenceImages"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "FAILED_UI_TEST_DIR"
+            value = "$(SOURCE_ROOT)/$(PROJECT_NAME)UITests/Screenshots/FailureScreenshots"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
