@@ -20,6 +20,7 @@
 		E95D22F029AE9FD000D1E682 /* MovieListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E95D22EE29AE9FD000D1E682 /* MovieListCell.xib */; };
 		E962535529B293E000ECEC5B /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962535429B293E000ECEC5B /* UIView+Shadow.swift */; };
 		E962535729B2992F00ECEC5B /* ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962535629B2992F00ECEC5B /* ListUITests.swift */; };
+		E962535929B29AA200ECEC5B /* DetailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962535829B29AA200ECEC5B /* DetailUITests.swift */; };
 		E99C59CF29AFD97000173691 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59CE29AFD97000173691 /* Movie.swift */; };
 		E99C59D129AFD9B400173691 /* MovieListGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D029AFD9B400173691 /* MovieListGateway.swift */; };
 		E99C59D429AFD9F700173691 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D329AFD9F700173691 /* Endpoint.swift */; };
@@ -64,6 +65,7 @@
 		E95D22EE29AE9FD000D1E682 /* MovieListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListCell.xib; sourceTree = "<group>"; };
 		E962535429B293E000ECEC5B /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
 		E962535629B2992F00ECEC5B /* ListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUITests.swift; sourceTree = "<group>"; };
+		E962535829B29AA200ECEC5B /* DetailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUITests.swift; sourceTree = "<group>"; };
 		E99C59CE29AFD97000173691 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E99C59D029AFD9B400173691 /* MovieListGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListGateway.swift; sourceTree = "<group>"; };
 		E99C59D329AFD9F700173691 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -120,7 +122,6 @@
 		E95D22A729AD475600D1E682 /* Course Materials */ = {
 			isa = PBXGroup;
 			children = (
-				E962535229B293D400ECEC5B /* Shared */,
 				E95D22E429AE9E1500D1E682 /* AppCoordinator.swift */,
 				E95D22A829AD475600D1E682 /* AppDelegate.swift */,
 				E95D22B129AD475600D1E682 /* Assets.xcassets */,
@@ -132,6 +133,7 @@
 				E95D22EC29AE9FB600D1E682 /* Login */,
 				E99C59CD29AFD96300173691 /* Models */,
 				E99C59D229AFD9E800173691 /* Network */,
+				E962535229B293D400ECEC5B /* Shared */,
 				E95D22AA29AD475600D1E682 /* SceneDelegate.swift */,
 			);
 			path = "Course Materials";
@@ -142,6 +144,7 @@
 			children = (
 				E99C59FF29B28B8400173691 /* LoginUITests.swift */,
 				E962535629B2992F00ECEC5B /* ListUITests.swift */,
+				E962535829B29AA200ECEC5B /* DetailUITests.swift */,
 			);
 			path = "Course MaterialsUITests";
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E962535929B29AA200ECEC5B /* DetailUITests.swift in Sources */,
 				E99C5A0129B28BFA00173691 /* LoginUITests.swift in Sources */,
 				E962535729B2992F00ECEC5B /* ListUITests.swift in Sources */,
 			);

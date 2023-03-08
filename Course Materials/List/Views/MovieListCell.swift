@@ -9,6 +9,7 @@ import UIKit
 
 struct MovieListCellModel {
 	
+	let id: Int
 	let posterUrl: String?
 	let titleText: String
 	let plotText: String
@@ -54,7 +55,10 @@ class MovieListCell: UICollectionViewCell {
 		self.plotLabel.text = viewModel.plotText
 		self.bindImage(viewModel: viewModel)
 		
-		self.configureAccessibility(titleText: viewModel.titleText)
+		self.configureAccessibility(
+			id: viewModel.id,
+			titleText: viewModel.titleText
+		)
 	}
 	
 	private func bindImage(viewModel: MovieListCellModel) {
@@ -86,8 +90,10 @@ class MovieListCell: UICollectionViewCell {
 		self.task?.resume()
 	}
 	
-	private func configureAccessibility(titleText: String) {
+	private func configureAccessibility(id: Int, titleText: String) {
 
 		self.titleLabel.accessibilityLabel = "\(titleText)"
+		self.containerView.accessibilityIdentifier = "com.uitest.cell.\(id)"
+		self.containerView.accessibilityTraits = .button
 	}
 }
