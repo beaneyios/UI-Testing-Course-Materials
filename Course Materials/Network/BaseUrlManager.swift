@@ -5,11 +5,16 @@
 //  Created by Matt Beaney on 01/03/2023.
 //
 
-import Foundation
+import UIKit
 
 struct BaseUrlManager {
 	
 	static var baseUrl: String {
-		"https://beaneyios.github.io"
+		
+		if UIApplication.shared.isRunningUITests {
+			return "http://localhost:9000"
+		} else {
+			return "https://beaneyios.github.io"
+		}
 	}
 }
