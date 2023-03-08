@@ -24,6 +24,7 @@
 		E96253B529B91BB100ECEC5B /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96253B429B91BB100ECEC5B /* LoginScreen.swift */; };
 		E96253B729B91C8900ECEC5B /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96253B629B91C8900ECEC5B /* ListScreen.swift */; };
 		E96253B929B91D9D00ECEC5B /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96253B829B91D9D00ECEC5B /* DetailScreen.swift */; };
+		E96253BD29B91F6B00ECEC5B /* XCUIElement+WaitForExistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96253BC29B91F6B00ECEC5B /* XCUIElement+WaitForExistence.swift */; };
 		E99C59CF29AFD97000173691 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59CE29AFD97000173691 /* Movie.swift */; };
 		E99C59D129AFD9B400173691 /* MovieListGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D029AFD9B400173691 /* MovieListGateway.swift */; };
 		E99C59D429AFD9F700173691 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D329AFD9F700173691 /* Endpoint.swift */; };
@@ -72,6 +73,7 @@
 		E96253B429B91BB100ECEC5B /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		E96253B629B91C8900ECEC5B /* ListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
 		E96253B829B91D9D00ECEC5B /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
+		E96253BC29B91F6B00ECEC5B /* XCUIElement+WaitForExistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+WaitForExistence.swift"; sourceTree = "<group>"; };
 		E99C59CE29AFD97000173691 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E99C59D029AFD9B400173691 /* MovieListGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListGateway.swift; sourceTree = "<group>"; };
 		E99C59D329AFD9F700173691 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -148,10 +150,9 @@
 		E95D22C829AD475700D1E682 /* Course MaterialsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E96253B329B91B9D00ECEC5B /* Tests */,
-				E99C59FF29B28B8400173691 /* LoginUITests.swift */,
-				E962535629B2992F00ECEC5B /* ListUITests.swift */,
-				E962535829B29AA200ECEC5B /* DetailUITests.swift */,
+				E96253BB29B91F5F00ECEC5B /* Extensions */,
+				E96253BA29B91F5900ECEC5B /* Tests */,
+				E96253B329B91B9D00ECEC5B /* Screens */,
 			);
 			path = "Course MaterialsUITests";
 			sourceTree = "<group>";
@@ -243,14 +244,32 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		E96253B329B91B9D00ECEC5B /* Tests */ = {
+		E96253B329B91B9D00ECEC5B /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				E96253B429B91BB100ECEC5B /* LoginScreen.swift */,
 				E96253B629B91C8900ECEC5B /* ListScreen.swift */,
 				E96253B829B91D9D00ECEC5B /* DetailScreen.swift */,
 			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		E96253BA29B91F5900ECEC5B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E99C59FF29B28B8400173691 /* LoginUITests.swift */,
+				E962535629B2992F00ECEC5B /* ListUITests.swift */,
+				E962535829B29AA200ECEC5B /* DetailUITests.swift */,
+			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		E96253BB29B91F5F00ECEC5B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E96253BC29B91F6B00ECEC5B /* XCUIElement+WaitForExistence.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E99C59CD29AFD96300173691 /* Models */ = {
@@ -441,6 +460,7 @@
 			files = (
 				E96253B729B91C8900ECEC5B /* ListScreen.swift in Sources */,
 				E962535929B29AA200ECEC5B /* DetailUITests.swift in Sources */,
+				E96253BD29B91F6B00ECEC5B /* XCUIElement+WaitForExistence.swift in Sources */,
 				E96253B929B91D9D00ECEC5B /* DetailScreen.swift in Sources */,
 				E96253B529B91BB100ECEC5B /* LoginScreen.swift in Sources */,
 				E99C5A0129B28BFA00173691 /* LoginUITests.swift in Sources */,

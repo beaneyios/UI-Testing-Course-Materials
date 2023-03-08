@@ -25,9 +25,8 @@ class ListScreen {
 		self.app.buttons["com.uitest.cell.\(id)"]
 	}
 	
-	func waitForScreen() -> Bool {
-		
+	func waitForScreen() {
 		let listView = app.otherElements["com.uitest.list.view"]
-		return listView.waitForExistence(timeout: 2.0)
+		listView.waitForExistence(label: "List View")
 	}
 }

@@ -21,7 +21,7 @@ class DetailScreen {
 	}
 	
 	func subtitleLabel() -> String {
-		self.app.staticTexts["com.uitest.detail.title"].label
+		self.app.staticTexts["com.uitest.detail.subtitle"].label
 	}
 	
 	func actorLabel() -> String {
@@ -32,9 +32,9 @@ class DetailScreen {
 		self.app.staticTexts["com.uitest.detail.runTime"].label		
 	}
 	
-	func waitForScreen() -> Bool {
+	func waitForScreen() {
 		
 		let listView = app.otherElements["com.uitest.detail.view"]
-		return listView.waitForExistence(timeout: 2.0)
+		listView.waitForExistence(label: "Detail View")
 	}
 }

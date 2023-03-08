@@ -21,16 +21,14 @@ final class DetailUITests: XCTestCase {
 
 		// Create login screen and use it to navigate to the detail view
 		let listScreen = ListScreen(app: app)
-		let listFound = listScreen.waitForScreen()
-		XCTAssertTrue(listFound)
+		listScreen.waitForScreen()
 
-		let cell = listScreen.cell(forId: "1").tap()
+		let cell = listScreen.cell(forId: "1")
 		cell.tap()
 		
 		// Create detail screen and use it to find elements for testing
 		let detailScreen = DetailScreen(app: app)
-		let detailFound = detailScreen.waitForScreen()
-		XCTAssertTrue(detailFound)
+		detailScreen.waitForScreen()
 		
 		XCTAssertEqual(detailScreen.titleLabel(), "Beetlejuice")
 		XCTAssertEqual(
@@ -38,6 +36,6 @@ final class DetailUITests: XCTestCase {
 			"A couple of recently deceased ghosts contract the services of a \"bio-exorcist\" in order to remove the obnoxious new owners of their house."
 		)
 		XCTAssertEqual(detailScreen.actorLabel(), "Alec Baldwin, Geena Davis, Annie McEnroe, Maurice Page")
-		XCTAssertEqual(detailScreen.runTimeLabel, "92")
+		XCTAssertEqual(detailScreen.runTimeLabel(), "92")
 	}
 }

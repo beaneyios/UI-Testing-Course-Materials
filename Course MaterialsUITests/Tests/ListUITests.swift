@@ -21,8 +21,7 @@ final class ListUITests: XCTestCase {
 		
 		// Create list screen and use it to find elements on the screen
 		let listScreen = ListScreen(app: app)
-		let listViewFound = listScreen.waitForScreen()
-		XCTAssertTrue(listViewFound)
+		listScreen.waitForScreen()
 		
 		let firstTitleViewFound = listScreen.findCell(titled: "Beetlejuice")
 		XCTAssertTrue(firstTitleViewFound)
