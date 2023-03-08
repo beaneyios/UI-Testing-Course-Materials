@@ -38,7 +38,7 @@ class MovieDetailViewController: UIViewController {
 		self.titleLbl.text = self.movie.title
 		self.subtitleLbl.text = self.movie.plot
 		self.actorsLbl.text = self.movie.actors
-		self.runTimeLbl.text = self.movie.runTime
+		self.runTimeLbl.text = self.movie.runtime
 		self.bindImage()
 		
 		self.configureAccessibility()
