@@ -30,6 +30,7 @@
 		E96C242029B924BE004E1720 /* Shock in Frameworks */ = {isa = PBXBuildFile; productRef = E96C241F29B924BE004E1720 /* Shock */; };
 		E96C242329B92577004E1720 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = E96C242229B92577004E1720 /* login.json */; };
 		E96C242529B92C31004E1720 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = E96C242429B92C31004E1720 /* movies.json */; };
+		E96C242929B92D24004E1720 /* MockedUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C242829B92D24004E1720 /* MockedUITest.swift */; };
 		E99C59CF29AFD97000173691 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59CE29AFD97000173691 /* Movie.swift */; };
 		E99C59D129AFD9B400173691 /* MovieListGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D029AFD9B400173691 /* MovieListGateway.swift */; };
 		E99C59D429AFD9F700173691 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D329AFD9F700173691 /* Endpoint.swift */; };
@@ -83,6 +84,7 @@
 		E96253C129B922B800ECEC5B /* XCUIApplication+Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Launch.swift"; sourceTree = "<group>"; };
 		E96C242229B92577004E1720 /* login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
 		E96C242429B92C31004E1720 /* movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
+		E96C242829B92D24004E1720 /* MockedUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedUITest.swift; sourceTree = "<group>"; };
 		E99C59CE29AFD97000173691 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E99C59D029AFD9B400173691 /* MovieListGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListGateway.swift; sourceTree = "<group>"; };
 		E99C59D329AFD9F700173691 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -161,11 +163,12 @@
 		E95D22C829AD475700D1E682 /* Course MaterialsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E96C242129B9256C004E1720 /* Fixtures */,
+				E96C242829B92D24004E1720 /* MockedUITest.swift */,
 				E99C59FF29B28B8400173691 /* LoginUITests.swift */,
 				E962535629B2992F00ECEC5B /* ListUITests.swift */,
 				E962535829B29AA200ECEC5B /* DetailUITests.swift */,
 				E96253BB29B91F5F00ECEC5B /* Extensions */,
+				E96C242129B9256C004E1720 /* Fixtures */,
 				E96253B329B91B9D00ECEC5B /* Screens */,
 			);
 			path = "Course MaterialsUITests";
@@ -490,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E96253B729B91C8900ECEC5B /* ListScreen.swift in Sources */,
+				E96C242929B92D24004E1720 /* MockedUITest.swift in Sources */,
 				E962535929B29AA200ECEC5B /* DetailUITests.swift in Sources */,
 				E96253C229B922B800ECEC5B /* XCUIApplication+Launch.swift in Sources */,
 				E96253BD29B91F6B00ECEC5B /* XCUIElement+WaitForExistence.swift in Sources */,

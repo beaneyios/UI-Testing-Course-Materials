@@ -6,22 +6,8 @@
 //
 
 import XCTest
-import Shock
 
-final class LoginUITests: XCTestCase {
-	
-	var mockServer: MockServer!
-	
-	override func setUp() {
-		super.setUp()
-		self.mockServer = MockServer(
-			port: 9000,
-			bundle: Bundle(for: LoginUITests.self)
-		)
-		
-		self.mockServer.start()
-		self.configureMocks()
-	}
+final class LoginUITests: MockedUITests {
 
     func testLogin() throws {
 
@@ -38,16 +24,4 @@ final class LoginUITests: XCTestCase {
 		// We use an assertion to ensure the view was found.
 		XCTAssertTrue(listViewFound)
     }
-	
-	private func configureMocks() {
-		
-		let route: MockHTTPRoute = .simple(
-			method: .get,
-			urlPath: "/login.json",
-			code: 200,
-			filename: "login.json"
-		)
-		
-		self.mockServer.setup(route: route)
-	}
 }
