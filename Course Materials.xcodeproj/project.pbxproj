@@ -150,8 +150,10 @@
 		E95D22C829AD475700D1E682 /* Course MaterialsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				E99C59FF29B28B8400173691 /* LoginUITests.swift */,
+				E962535629B2992F00ECEC5B /* ListUITests.swift */,
+				E962535829B29AA200ECEC5B /* DetailUITests.swift */,
 				E96253BB29B91F5F00ECEC5B /* Extensions */,
-				E96253BA29B91F5900ECEC5B /* Tests */,
 				E96253B329B91B9D00ECEC5B /* Screens */,
 			);
 			path = "Course MaterialsUITests";
@@ -252,16 +254,6 @@
 				E96253B829B91D9D00ECEC5B /* DetailScreen.swift */,
 			);
 			path = Screens;
-			sourceTree = "<group>";
-		};
-		E96253BA29B91F5900ECEC5B /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				E99C59FF29B28B8400173691 /* LoginUITests.swift */,
-				E962535629B2992F00ECEC5B /* ListUITests.swift */,
-				E962535829B29AA200ECEC5B /* DetailUITests.swift */,
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		E96253BB29B91F5F00ECEC5B /* Extensions */ = {
