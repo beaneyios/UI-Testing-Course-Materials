@@ -24,7 +24,7 @@
 		E96253B529B91BB100ECEC5B /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96253B429B91BB100ECEC5B /* LoginScreen.swift */; };
 		E96253B729B91C8900ECEC5B /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96253B629B91C8900ECEC5B /* ListScreen.swift */; };
 		E96253B929B91D9D00ECEC5B /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96253B829B91D9D00ECEC5B /* DetailScreen.swift */; };
-		E96253BD29B91F6B00ECEC5B /* XCUIElement+WaitForExistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96253BC29B91F6B00ECEC5B /* XCUIElement+WaitForExistence.swift */; };
+		E96253BD29B91F6B00ECEC5B /* XCUIApplication+WaitForExistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96253BC29B91F6B00ECEC5B /* XCUIApplication+WaitForExistence.swift */; };
 		E96253C029B922A000ECEC5B /* UIApplication+UITestingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96253BF29B922A000ECEC5B /* UIApplication+UITestingHelpers.swift */; };
 		E96253C229B922B800ECEC5B /* XCUIApplication+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96253C129B922B800ECEC5B /* XCUIApplication+Launch.swift */; };
 		E96C242029B924BE004E1720 /* Shock in Frameworks */ = {isa = PBXBuildFile; productRef = E96C241F29B924BE004E1720 /* Shock */; };
@@ -82,7 +82,7 @@
 		E96253B429B91BB100ECEC5B /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		E96253B629B91C8900ECEC5B /* ListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
 		E96253B829B91D9D00ECEC5B /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
-		E96253BC29B91F6B00ECEC5B /* XCUIElement+WaitForExistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+WaitForExistence.swift"; sourceTree = "<group>"; };
+		E96253BC29B91F6B00ECEC5B /* XCUIApplication+WaitForExistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+WaitForExistence.swift"; sourceTree = "<group>"; };
 		E96253BF29B922A000ECEC5B /* UIApplication+UITestingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+UITestingHelpers.swift"; sourceTree = "<group>"; };
 		E96253C129B922B800ECEC5B /* XCUIApplication+Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Launch.swift"; sourceTree = "<group>"; };
 		E96C242229B92577004E1720 /* login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
@@ -280,7 +280,7 @@
 		E96253BB29B91F5F00ECEC5B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E96253BC29B91F6B00ECEC5B /* XCUIElement+WaitForExistence.swift */,
+				E96253BC29B91F6B00ECEC5B /* XCUIApplication+WaitForExistence.swift */,
 				E96253C129B922B800ECEC5B /* XCUIApplication+Launch.swift */,
 				E96C242F29B92F8E004E1720 /* XCUIApplication+Screenshot.swift */,
 				E96C242D29B92F6F004E1720 /* UIImage+ScreenshotHelpers.swift */,
@@ -508,7 +508,7 @@
 				E96C242929B92D24004E1720 /* MockedUITest.swift in Sources */,
 				E962535929B29AA200ECEC5B /* DetailUITests.swift in Sources */,
 				E96253C229B922B800ECEC5B /* XCUIApplication+Launch.swift in Sources */,
-				E96253BD29B91F6B00ECEC5B /* XCUIElement+WaitForExistence.swift in Sources */,
+				E96253BD29B91F6B00ECEC5B /* XCUIApplication+WaitForExistence.swift in Sources */,
 				E96C243029B92F8E004E1720 /* XCUIApplication+Screenshot.swift in Sources */,
 				E96253B929B91D9D00ECEC5B /* DetailScreen.swift in Sources */,
 				E96253B529B91BB100ECEC5B /* LoginScreen.swift in Sources */,

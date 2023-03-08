@@ -27,6 +27,6 @@ class ListScreen {
 	
 	func waitForScreen() {
 		let listView = app.otherElements["com.uitest.list.view"]
-		listView.waitForExistence(label: "List View")
+		self.app.wait(for: listView, label: "List View")
 	}
 }
