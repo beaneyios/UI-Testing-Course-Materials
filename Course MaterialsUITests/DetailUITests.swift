@@ -15,34 +15,29 @@ final class DetailUITests: XCTestCase {
 		let app = XCUIApplication()
 		app.launch()
 		
+		// Create login screen and use it to login
 		let loginScreen = LoginScreen(app: app)
 		loginScreen.login(username: "test@test.com", password: "testPassword123")
-		
-		/** Now we just need to wait for the list view to appear.
-			**NOTE**: See how we're applying a generous timeout of 2 seconds?
-			That's to allow for the network request to complete.
-			More on that in a later chapter.
-		*/
-		let listView = app.otherElements["com.uitest.list.view"]
-		_ = listView.waitForExistence(timeout: 2.0)
-				
-		let cell = app.buttons["com.uitest.cell.1"]
+
+		// Create login screen and use it to navigate to the detail view
+		let listScreen = ListScreen(app: app)
+		let listFound = listScreen.waitForScreen()
+		XCTAssertTrue(listFound)
+
+		let cell = listScreen.cell(forId: "1").tap()
 		cell.tap()
 		
-		let detailView = app.otherElements["com.uitest.detail.view"]
-		let detailViewFound = detailView.waitForExistence(timeout: 2.0)
-		XCTAssertTrue(detailViewFound)
+		// Create detail screen and use it to find elements for testing
+		let detailScreen = DetailScreen(app: app)
+		let detailFound = detailScreen.waitForScreen()
+		XCTAssertTrue(detailFound)
 		
-		let title = app.staticTexts["com.uitest.detail.title"]
-		XCTAssertEqual(title.label, "Beetlejuice")
-		
-		let subtitle = app.staticTexts["com.uitest.detail.subtitle"]
-		XCTAssertEqual(subtitle.label, "A couple of recently deceased ghosts contract the services of a \"bio-exorcist\" in order to remove the obnoxious new owners of their house.")
-		
-		let actors = app.staticTexts["com.uitest.detail.actors"]
-		XCTAssertEqual(actors.label, "Alec Baldwin, Geena Davis, Annie McEnroe, Maurice Page")
-		
-		let runTime = app.staticTexts["com.uitest.detail.runTime"]
-		XCTAssertEqual(runTime.label, "92")
+		XCTAssertEqual(detailScreen.titleLabel(), "Beetlejuice")
+		XCTAssertEqual(
+			detailScreen.subtitleLabel(),
+			"A couple of recently deceased ghosts contract the services of a \"bio-exorcist\" in order to remove the obnoxious new owners of their house."
+		)
+		XCTAssertEqual(detailScreen.actorLabel(), "Alec Baldwin, Geena Davis, Annie McEnroe, Maurice Page")
+		XCTAssertEqual(detailScreen.runTimeLabel, "92")
 	}
 }

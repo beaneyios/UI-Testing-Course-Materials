@@ -15,33 +15,22 @@ final class ListUITests: XCTestCase {
 		let app = XCUIApplication()
 		app.launch()
 		
+		// Create login screen and use it to login
 		let loginScreen = LoginScreen(app: app)
 		loginScreen.login(username: "test@test.com", password: "testPassword123")
 		
-		/** Now we just need to wait for the list view to appear.
-			**NOTE**: See how we're applying a generous timeout of 2 seconds?
-			That's to allow for the network request to complete.
-			More on that in a later chapter.
-		*/
-		let listView = app.otherElements["com.uitest.list.view"]
-		let listViewFound = listView.waitForExistence(timeout: 2.0)
-		
-		// We use an assertion to ensure the view was found.
+		// Create list screen and use it to find elements on the screen
+		let listScreen = ListScreen(app: app)
+		let listViewFound = listScreen.waitForScreen()
 		XCTAssertTrue(listViewFound)
 		
-		// Look for the first few cells to make sure they are rendering
-		let firstTitle = app.staticTexts["Beetlejuice"]
-		let firstTitleViewFound = firstTitle.waitForExistence(timeout: 2.0)
+		let firstTitleViewFound = listScreen.findCell(titled: "Beetlejuice")
 		XCTAssertTrue(firstTitleViewFound)
 		
-		let secondTitle = app.staticTexts["The Cotton Club"]
-		let secondTitleViewFound = secondTitle.waitForExistence(timeout: 2.0)
+		let secondTitleViewFound = listScreen.findCell(titled: "The Cotton Club")
 		XCTAssertTrue(secondTitleViewFound)
 		
-		let thirdTitle = app.staticTexts["The Shawshank Redemption"]
-		let thirdTitleViewFound = thirdTitle.waitForExistence(timeout: 2.0)
+		let thirdTitleViewFound = listScreen.findCell(titled: "The Shawshank Redemption")
 		XCTAssertTrue(thirdTitleViewFound)
-		
-		/// NOTE: Lots of code repetition here. This will be tackled in the next chapter.
 	}
 }
