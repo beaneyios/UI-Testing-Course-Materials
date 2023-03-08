@@ -18,10 +18,6 @@ final class ListUITests: XCTestCase {
 		let loginScreen = LoginScreen(app: app)
 		loginScreen.login(username: "test@test.com", password: "testPassword123")
 		
-		/// Now tap the button
-		let button = app.buttons["com.uitest.login.button"]
-		button.tap()
-		
 		/** Now we just need to wait for the list view to appear.
 			**NOTE**: See how we're applying a generous timeout of 2 seconds?
 			That's to allow for the network request to complete.
