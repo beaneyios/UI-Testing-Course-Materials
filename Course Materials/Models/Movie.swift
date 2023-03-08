@@ -11,7 +11,7 @@ struct Movie: Codable {
 	let id: Int
 	let title: String
 	let year: String
-	let runTime: String?
+	let runtime: String?
 	let director: String
 	let actors: String
 	let plot: String
