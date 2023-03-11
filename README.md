@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/37811466/224490695-8cc8a230-4ebc-4770-987a-b5e87b9061c3.png" width="300" height="300">
+<img src="https://user-images.githubusercontent.com/37811466/224490695-8cc8a230-4ebc-4770-987a-b5e87b9061c3.png" width="150" height="150">
 
 # Real-world iOS UI testing
 
