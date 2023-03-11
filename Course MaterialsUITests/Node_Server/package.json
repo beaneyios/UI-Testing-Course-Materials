@@ -1,9 +1,8 @@
 {
   "dependencies": {
     "body-parser": "^1.20.1",
-    "express": "^4.18.2",
-    "socket.io": "^4.5.4"
+    "express": "^4.18.2"
   },
   "type":"module",
-  "name": "Midnite-Server"
+  "name": "ui-testing-server"
 }
