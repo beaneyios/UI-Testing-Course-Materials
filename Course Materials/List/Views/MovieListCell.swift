@@ -91,9 +91,11 @@ class MovieListCell: UICollectionViewCell {
 	}
 	
 	private func configureAccessibility(id: Int, titleText: String) {
-
+		
 		self.titleLabel.accessibilityLabel = "\(titleText)"
+		self.titleLabel.isAccessibilityElement = true
 		self.containerView.accessibilityIdentifier = "com.uitest.cell.\(id)"
 		self.containerView.accessibilityTraits = .button
+		self.containerView.isAccessibilityElement = true
 	}
 }
