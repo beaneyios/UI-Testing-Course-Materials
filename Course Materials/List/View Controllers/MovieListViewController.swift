@@ -25,6 +25,8 @@ class MovieListViewController: UIViewController {
 		self.configureCollectionView()
 		self.bindToViewModel()
 		self.viewModel.loadData()
+		
+		self.configureAccessibility()
 	}
 	
 	private func configureCollectionView() {
@@ -49,6 +51,10 @@ class MovieListViewController: UIViewController {
 				self?.collectionView?.reloadData()
 			})
 			.store(in: &cancellables)
+	}
+	
+	private func configureAccessibility() {
+		self.view.accessibilityIdentifier = "com.uitest.list.view"
 	}
 }
 

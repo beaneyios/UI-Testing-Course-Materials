@@ -38,6 +38,7 @@ class MovieListViewModel {
 				
 				self.cellModels = movies.map {
 					MovieListCellModel(
+						id: $0.id,
 						posterUrl: $0.posterUrl,
 						titleText: $0.title,
 						plotText: $0.plot

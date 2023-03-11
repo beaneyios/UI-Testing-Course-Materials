@@ -24,6 +24,8 @@ class LoginViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.styleSubViews()
+		
+		self.configureAccessibility()
 	}
 	
 	@IBAction func didTapSignIn(_ sender: Any) {
@@ -39,6 +41,14 @@ class LoginViewController: UIViewController {
 		self.signInBtn.backgroundColor = .red
 		self.signInBtn.tintColor = .white
 		self.signInBtn.layer.cornerRadius = 12.0
+	}
+
+	/// Allows us to write UI tests to read and interact with views on the screen.
+	private func configureAccessibility() {
+		self.view.accessibilityIdentifier = "com.uitest.login.view"
+		self.usernameTxtField.accessibilityIdentifier = "com.uitest.login.textfield.username"
+		self.passwordTxtField.accessibilityIdentifier = "com.uitest.login.textfield.password"
+		self.signInBtn.accessibilityIdentifier = "com.uitest.login.button"
 	}
 }
 

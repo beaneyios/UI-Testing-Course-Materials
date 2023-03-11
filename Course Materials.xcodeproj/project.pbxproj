@@ -12,9 +12,6 @@
 		E95D22B029AD475600D1E682 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E95D22AE29AD475600D1E682 /* Main.storyboard */; };
 		E95D22B229AD475600D1E682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E95D22B129AD475600D1E682 /* Assets.xcassets */; };
 		E95D22B529AD475600D1E682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E95D22B329AD475600D1E682 /* LaunchScreen.storyboard */; };
-		E95D22C029AD475700D1E682 /* Course_MaterialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22BF29AD475700D1E682 /* Course_MaterialsTests.swift */; };
-		E95D22CA29AD475700D1E682 /* Course_MaterialsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22C929AD475700D1E682 /* Course_MaterialsUITests.swift */; };
-		E95D22CC29AD475700D1E682 /* Course_MaterialsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22CB29AD475700D1E682 /* Course_MaterialsUITestsLaunchTests.swift */; };
 		E95D22D929AD477700D1E682 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22D829AD477700D1E682 /* LoginViewController.swift */; };
 		E95D22E529AE9E1500D1E682 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22E429AE9E1500D1E682 /* AppCoordinator.swift */; };
 		E95D22E729AE9F2E00D1E682 /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22E629AE9F2E00D1E682 /* MovieListViewController.swift */; };
@@ -22,6 +19,8 @@
 		E95D22EF29AE9FD000D1E682 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95D22ED29AE9FD000D1E682 /* MovieListCell.swift */; };
 		E95D22F029AE9FD000D1E682 /* MovieListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E95D22EE29AE9FD000D1E682 /* MovieListCell.xib */; };
 		E962535529B293E000ECEC5B /* UIView+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962535429B293E000ECEC5B /* UIView+Shadow.swift */; };
+		E962535729B2992F00ECEC5B /* ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962535629B2992F00ECEC5B /* ListUITests.swift */; };
+		E962535929B29AA200ECEC5B /* DetailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962535829B29AA200ECEC5B /* DetailUITests.swift */; };
 		E99C59CF29AFD97000173691 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59CE29AFD97000173691 /* Movie.swift */; };
 		E99C59D129AFD9B400173691 /* MovieListGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D029AFD9B400173691 /* MovieListGateway.swift */; };
 		E99C59D429AFD9F700173691 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D329AFD9F700173691 /* Endpoint.swift */; };
@@ -36,16 +35,10 @@
 		E99C59E729AFE98C00173691 /* LoginGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59E629AFE98C00173691 /* LoginGateway.swift */; };
 		E99C59E929AFE9FD00173691 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59E829AFE9FD00173691 /* LoginRequest.swift */; };
 		E99C59EB29AFEAB200173691 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59EA29AFEAB200173691 /* LoginResponse.swift */; };
+		E99C5A0129B28BFA00173691 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59FF29B28B8400173691 /* LoginUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E95D22BC29AD475700D1E682 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E95D229D29AD475600D1E682 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E95D22A429AD475600D1E682;
-			remoteInfo = "Course Materials";
-		};
 		E95D22C629AD475700D1E682 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E95D229D29AD475600D1E682 /* Project object */;
@@ -63,11 +56,7 @@
 		E95D22B129AD475600D1E682 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E95D22B429AD475600D1E682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E95D22B629AD475600D1E682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E95D22BB29AD475700D1E682 /* Course MaterialsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Course MaterialsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E95D22BF29AD475700D1E682 /* Course_MaterialsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_MaterialsTests.swift; sourceTree = "<group>"; };
 		E95D22C529AD475700D1E682 /* Course MaterialsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Course MaterialsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E95D22C929AD475700D1E682 /* Course_MaterialsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_MaterialsUITests.swift; sourceTree = "<group>"; };
-		E95D22CB29AD475700D1E682 /* Course_MaterialsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course_MaterialsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E95D22D829AD477700D1E682 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E95D22E429AE9E1500D1E682 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		E95D22E629AE9F2E00D1E682 /* MovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +64,8 @@
 		E95D22ED29AE9FD000D1E682 /* MovieListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
 		E95D22EE29AE9FD000D1E682 /* MovieListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieListCell.xib; sourceTree = "<group>"; };
 		E962535429B293E000ECEC5B /* UIView+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shadow.swift"; sourceTree = "<group>"; };
+		E962535629B2992F00ECEC5B /* ListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUITests.swift; sourceTree = "<group>"; };
+		E962535829B29AA200ECEC5B /* DetailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailUITests.swift; sourceTree = "<group>"; };
 		E99C59CE29AFD97000173691 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E99C59D029AFD9B400173691 /* MovieListGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListGateway.swift; sourceTree = "<group>"; };
 		E99C59D329AFD9F700173691 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -89,17 +80,11 @@
 		E99C59E629AFE98C00173691 /* LoginGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginGateway.swift; sourceTree = "<group>"; };
 		E99C59E829AFE9FD00173691 /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		E99C59EA29AFEAB200173691 /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		E99C59FF29B28B8400173691 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E95D22A229AD475600D1E682 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E95D22B829AD475700D1E682 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -120,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				E95D22A729AD475600D1E682 /* Course Materials */,
-				E95D22BE29AD475700D1E682 /* Course MaterialsTests */,
 				E95D22C829AD475700D1E682 /* Course MaterialsUITests */,
 				E95D22A629AD475600D1E682 /* Products */,
 			);
@@ -130,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				E95D22A529AD475600D1E682 /* Course Materials.app */,
-				E95D22BB29AD475700D1E682 /* Course MaterialsTests.xctest */,
 				E95D22C529AD475700D1E682 /* Course MaterialsUITests.xctest */,
 			);
 			name = Products;
@@ -139,7 +122,6 @@
 		E95D22A729AD475600D1E682 /* Course Materials */ = {
 			isa = PBXGroup;
 			children = (
-				E962535229B293D400ECEC5B /* Shared */,
 				E95D22E429AE9E1500D1E682 /* AppCoordinator.swift */,
 				E95D22A829AD475600D1E682 /* AppDelegate.swift */,
 				E95D22B129AD475600D1E682 /* Assets.xcassets */,
@@ -151,24 +133,18 @@
 				E95D22EC29AE9FB600D1E682 /* Login */,
 				E99C59CD29AFD96300173691 /* Models */,
 				E99C59D229AFD9E800173691 /* Network */,
+				E962535229B293D400ECEC5B /* Shared */,
 				E95D22AA29AD475600D1E682 /* SceneDelegate.swift */,
 			);
 			path = "Course Materials";
 			sourceTree = "<group>";
 		};
-		E95D22BE29AD475700D1E682 /* Course MaterialsTests */ = {
-			isa = PBXGroup;
-			children = (
-				E95D22BF29AD475700D1E682 /* Course_MaterialsTests.swift */,
-			);
-			path = "Course MaterialsTests";
-			sourceTree = "<group>";
-		};
 		E95D22C829AD475700D1E682 /* Course MaterialsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				E95D22C929AD475700D1E682 /* Course_MaterialsUITests.swift */,
-				E95D22CB29AD475700D1E682 /* Course_MaterialsUITestsLaunchTests.swift */,
+				E99C59FF29B28B8400173691 /* LoginUITests.swift */,
+				E962535629B2992F00ECEC5B /* ListUITests.swift */,
+				E962535829B29AA200ECEC5B /* DetailUITests.swift */,
 			);
 			path = "Course MaterialsUITests";
 			sourceTree = "<group>";
@@ -335,24 +311,6 @@
 			productReference = E95D22A529AD475600D1E682 /* Course Materials.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E95D22BA29AD475700D1E682 /* Course MaterialsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E95D22D229AD475700D1E682 /* Build configuration list for PBXNativeTarget "Course MaterialsTests" */;
-			buildPhases = (
-				E95D22B729AD475700D1E682 /* Sources */,
-				E95D22B829AD475700D1E682 /* Frameworks */,
-				E95D22B929AD475700D1E682 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E95D22BD29AD475700D1E682 /* PBXTargetDependency */,
-			);
-			name = "Course MaterialsTests";
-			productName = "Course MaterialsTests";
-			productReference = E95D22BB29AD475700D1E682 /* Course MaterialsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		E95D22C429AD475700D1E682 /* Course MaterialsUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E95D22D529AD475700D1E682 /* Build configuration list for PBXNativeTarget "Course MaterialsUITests" */;
@@ -384,10 +342,6 @@
 					E95D22A429AD475600D1E682 = {
 						CreatedOnToolsVersion = 14.2;
 					};
-					E95D22BA29AD475700D1E682 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = E95D22A429AD475600D1E682;
-					};
 					E95D22C429AD475700D1E682 = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = E95D22A429AD475600D1E682;
@@ -408,7 +362,6 @@
 			projectRoot = "";
 			targets = (
 				E95D22A429AD475600D1E682 /* Course Materials */,
-				E95D22BA29AD475700D1E682 /* Course MaterialsTests */,
 				E95D22C429AD475700D1E682 /* Course MaterialsUITests */,
 			);
 		};
@@ -423,13 +376,6 @@
 				E95D22F029AE9FD000D1E682 /* MovieListCell.xib in Resources */,
 				E95D22B229AD475600D1E682 /* Assets.xcassets in Resources */,
 				E95D22B029AD475600D1E682 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E95D22B929AD475700D1E682 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,31 +418,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E95D22B729AD475700D1E682 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E95D22C029AD475700D1E682 /* Course_MaterialsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E95D22C129AD475700D1E682 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E95D22CC29AD475700D1E682 /* Course_MaterialsUITestsLaunchTests.swift in Sources */,
-				E95D22CA29AD475700D1E682 /* Course_MaterialsUITests.swift in Sources */,
+				E962535929B29AA200ECEC5B /* DetailUITests.swift in Sources */,
+				E99C5A0129B28BFA00173691 /* LoginUITests.swift in Sources */,
+				E962535729B2992F00ECEC5B /* ListUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E95D22BD29AD475700D1E682 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E95D22A429AD475600D1E682 /* Course Materials */;
-			targetProxy = E95D22BC29AD475700D1E682 /* PBXContainerItemProxy */;
-		};
 		E95D22C729AD475700D1E682 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E95D22A429AD475600D1E682 /* Course Materials */;
@@ -694,46 +628,6 @@
 			};
 			name = Release;
 		};
-		E95D22D329AD475700D1E682 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P3Y29KFBWG;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.learnuitesting.Course-MaterialsTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Course Materials.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Course Materials";
-			};
-			name = Debug;
-		};
-		E95D22D429AD475700D1E682 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = P3Y29KFBWG;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.learnuitesting.Course-MaterialsTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Course Materials.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Course Materials";
-			};
-			name = Release;
-		};
 		E95D22D629AD475700D1E682 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -787,15 +681,6 @@
 			buildConfigurations = (
 				E95D22D029AD475700D1E682 /* Debug */,
 				E95D22D129AD475700D1E682 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E95D22D229AD475700D1E682 /* Build configuration list for PBXNativeTarget "Course MaterialsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E95D22D329AD475700D1E682 /* Debug */,
-				E95D22D429AD475700D1E682 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -39,8 +39,9 @@ class MovieDetailViewController: UIViewController {
 		self.subtitleLbl.text = self.movie.plot
 		self.actorsLbl.text = self.movie.actors
 		self.runTimeLbl.text = self.movie.runtime
-		
 		self.bindImage()
+		
+		self.configureAccessibility()
 	}
 	
 	private func bindImage() {
@@ -68,5 +69,14 @@ class MovieDetailViewController: UIViewController {
 				self.poster.image = image
 			}
 		}.resume()
+	}
+	
+	private func configureAccessibility() {
+		
+		self.titleLbl.accessibilityIdentifier = "com.uitest.detail.title"
+		self.subtitleLbl.accessibilityIdentifier = "com.uitest.detail.subtitle"
+		self.actorsLbl.accessibilityIdentifier = "com.uitest.detail.actors"
+		self.runTimeLbl.accessibilityIdentifier = "com.uitest.detail.runTime"
+		self.view.accessibilityIdentifier = "com.uitest.detail.view"
 	}
 }
