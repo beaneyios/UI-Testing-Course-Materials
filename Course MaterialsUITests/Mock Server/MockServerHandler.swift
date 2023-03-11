@@ -29,12 +29,9 @@ class MockServerHandler {
 		_ = try await session.data(for: request)
 	}
 	
-	static func pushWebsocket(
-		name: String,
-		channel: String
-	) async throws {
+	static func pushWebsocket(fixtureName: String) async throws {
 		
-		let jsonData = try self.jsonBody(named: name)
+		let jsonData = try self.jsonBody(named: fixtureName)
 		
 		let url = URL(string: "http://localhost:3000/websocket")!
 		var request = URLRequest(url: url)

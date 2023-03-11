@@ -36,6 +36,7 @@
 		E96C244F29BC9CA8004E1720 /* MockServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C244E29BC9CA8004E1720 /* MockServerHandler.swift */; };
 		E96C245229BCA0CA004E1720 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = E96C245129BCA0CA004E1720 /* SocketIO */; };
 		E96C245429BCA444004E1720 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C245329BCA444004E1720 /* SocketManager.swift */; };
+		E96C245629BCAFB0004E1720 /* movies-socket-message.json in Resources */ = {isa = PBXBuildFile; fileRef = E96C245529BCAFB0004E1720 /* movies-socket-message.json */; };
 		E99C59CF29AFD97000173691 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59CE29AFD97000173691 /* Movie.swift */; };
 		E99C59D129AFD9B400173691 /* MovieListGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D029AFD9B400173691 /* MovieListGateway.swift */; };
 		E99C59D429AFD9F700173691 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D329AFD9F700173691 /* Endpoint.swift */; };
@@ -94,6 +95,7 @@
 		E96C242F29B92F8E004E1720 /* XCUIApplication+Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Screenshot.swift"; sourceTree = "<group>"; };
 		E96C244E29BC9CA8004E1720 /* MockServerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServerHandler.swift; sourceTree = "<group>"; };
 		E96C245329BCA444004E1720 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
+		E96C245529BCAFB0004E1720 /* movies-socket-message.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "movies-socket-message.json"; sourceTree = "<group>"; };
 		E99C59CE29AFD97000173691 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E99C59D029AFD9B400173691 /* MovieListGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListGateway.swift; sourceTree = "<group>"; };
 		E99C59D329AFD9F700173691 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 			children = (
 				E96C242229B92577004E1720 /* login.json */,
 				E96C242429B92C31004E1720 /* movies.json */,
+				E96C245529BCAFB0004E1720 /* movies-socket-message.json */,
 			);
 			path = Fixtures;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 			files = (
 				E96C242529B92C31004E1720 /* movies.json in Resources */,
 				E96C242329B92577004E1720 /* login.json in Resources */,
+				E96C245629BCAFB0004E1720 /* movies-socket-message.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

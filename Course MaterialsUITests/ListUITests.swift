@@ -10,7 +10,7 @@ import XCTest
 final class ListUITests: MockedUITests {
 
 	@MainActor
-	func testList() throws {
+	func testList() async throws {
 		
 		self.recordMode = false
 		
@@ -27,5 +27,17 @@ final class ListUITests: MockedUITests {
 		listScreen.waitForScreen()
 		
 		self.verify(identifier: "List-View", app: app)
+		
+		// Send a websocket message
+		try await MockServerHandler.pushWebsocket(
+			fixtureName: "movies-socket-message"
+		)
+		
+		// Allow the websocket message to fire and be received by the app.
+		// If we weren't using snapshot, we could just "wait" for the cell to update
+		// with assertions.
+		sleep(1)
+		
+		self.verify(identifier: "List-View-Websocket", app: app)
 	}
 }
