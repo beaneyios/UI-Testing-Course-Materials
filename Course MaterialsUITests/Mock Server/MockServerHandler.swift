@@ -29,6 +29,23 @@ class MockServerHandler {
 		_ = try await session.data(for: request)
 	}
 	
+	static func pushWebsocket(
+		name: String,
+		channel: String
+	) async throws {
+		
+		let jsonData = try self.jsonBody(named: name)
+		
+		let url = URL(string: "http://localhost:3000/websocket")!
+		var request = URLRequest(url: url)
+		request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+		request.httpMethod = "PUT"
+		request.httpBody = jsonData
+		
+		let session = URLSession.shared
+		_ = try await session.data(for: request)
+	}
+	
 	static func cleanUp() async throws {
 		let url = URL(string: "http://localhost:3000/delete-all")!
 		var request = URLRequest(url: url)

@@ -34,6 +34,8 @@
 		E96C243029B92F8E004E1720 /* XCUIApplication+Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C242F29B92F8E004E1720 /* XCUIApplication+Screenshot.swift */; };
 		E96C243329B92FEA004E1720 /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = E96C243229B92FEA004E1720 /* iOSSnapshotTestCase */; };
 		E96C244F29BC9CA8004E1720 /* MockServerHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C244E29BC9CA8004E1720 /* MockServerHandler.swift */; };
+		E96C245229BCA0CA004E1720 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = E96C245129BCA0CA004E1720 /* SocketIO */; };
+		E96C245429BCA444004E1720 /* SocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96C245329BCA444004E1720 /* SocketManager.swift */; };
 		E99C59CF29AFD97000173691 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59CE29AFD97000173691 /* Movie.swift */; };
 		E99C59D129AFD9B400173691 /* MovieListGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D029AFD9B400173691 /* MovieListGateway.swift */; };
 		E99C59D429AFD9F700173691 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D329AFD9F700173691 /* Endpoint.swift */; };
@@ -91,6 +93,7 @@
 		E96C242D29B92F6F004E1720 /* UIImage+ScreenshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+ScreenshotHelpers.swift"; sourceTree = "<group>"; };
 		E96C242F29B92F8E004E1720 /* XCUIApplication+Screenshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Screenshot.swift"; sourceTree = "<group>"; };
 		E96C244E29BC9CA8004E1720 /* MockServerHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServerHandler.swift; sourceTree = "<group>"; };
+		E96C245329BCA444004E1720 /* SocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketManager.swift; sourceTree = "<group>"; };
 		E99C59CE29AFD97000173691 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E99C59D029AFD9B400173691 /* MovieListGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListGateway.swift; sourceTree = "<group>"; };
 		E99C59D329AFD9F700173691 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -113,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96C245229BCA0CA004E1720 /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +336,7 @@
 				E99C59D829AFDA7000173691 /* NetworkError.swift */,
 				E99C59DE29AFDB7300173691 /* NetworkManager.swift */,
 				E99C59D529AFDA3000173691 /* RequestFactory.swift */,
+				E96C245329BCA444004E1720 /* SocketManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -386,6 +391,7 @@
 			);
 			name = "Course Materials";
 			packageProductDependencies = (
+				E96C245129BCA0CA004E1720 /* SocketIO */,
 			);
 			productName = "Course Materials";
 			productReference = E95D22A529AD475600D1E682 /* Course Materials.app */;
@@ -442,6 +448,7 @@
 			mainGroup = E95D229C29AD475600D1E682;
 			packageReferences = (
 				E96C243129B92FEA004E1720 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */,
+				E96C245029BCA0CA004E1720 /* XCRemoteSwiftPackageReference "socket" */,
 			);
 			productRefGroup = E95D22A629AD475600D1E682 /* Products */;
 			projectDirPath = "";
@@ -491,6 +498,7 @@
 				E95D22A929AD475600D1E682 /* AppDelegate.swift in Sources */,
 				E99C59E729AFE98C00173691 /* LoginGateway.swift in Sources */,
 				E95D22EF29AE9FD000D1E682 /* MovieListCell.swift in Sources */,
+				E96C245429BCA444004E1720 /* SocketManager.swift in Sources */,
 				E99C59D429AFD9F700173691 /* Endpoint.swift in Sources */,
 				E99C59E529AFE96B00173691 /* LoginViewModel.swift in Sources */,
 				E99C59E129AFDFDD00173691 /* BaseUrlManager.swift in Sources */,
@@ -803,6 +811,14 @@
 				kind = branch;
 			};
 		};
+		E96C245029BCA0CA004E1720 /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -810,6 +826,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E96C243129B92FEA004E1720 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;
 			productName = iOSSnapshotTestCase;
+		};
+		E96C245129BCA0CA004E1720 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E96C245029BCA0CA004E1720 /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

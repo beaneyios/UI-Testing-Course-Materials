@@ -33,17 +33,11 @@ class MovieListViewModel {
 		
 		Task {
 			do {
+				self.downloader.delegate = self
 				let movies = try await self.downloader.fetchMovies().movies
 				self.movies = movies
 				
-				self.cellModels = movies.map {
-					MovieListCellModel(
-						id: $0.id,
-						posterUrl: $0.posterUrl,
-						titleText: $0.title,
-						plotText: $0.plot
-					)
-				}
+				self.reloadCellModels()
 			} catch {
 				print(error)
 			}
@@ -54,5 +48,38 @@ class MovieListViewModel {
 		
 		let movie = self.movies[indexPath.row]
 		self.delegate?.movieListDidSelectMovie(movie)
+	}
+	
+	private func reloadCellModels() {
+		
+		self.cellModels = movies.map {
+			MovieListCellModel(
+				id: $0.id,
+				posterUrl: $0.posterUrl,
+				titleText: $0.title,
+				plotText: $0.plot
+			)
+		}
+	}
+}
+
+extension MovieListViewModel: MovieListGatewayDelegate {
+	
+	func didReceiveNewMovies(_ movies: [Movie]) {
+		
+		self.movies = self.movies.map { oldMovie in
+			
+			let newMovie = movies.first { newMovie in
+				oldMovie.id == newMovie.id
+			}
+			
+			if let newMovie {
+				return newMovie
+			} else {
+				return oldMovie
+			}
+		}
+		
+		self.reloadCellModels()
 	}
 }
