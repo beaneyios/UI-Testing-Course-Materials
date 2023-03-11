@@ -60,7 +60,8 @@ class AppCoordinator {
 		let viewModel = MovieListViewModel(
 			downloader: MovieListGateway(
 				requestFactory: RequestFactory(baseUrl: BaseUrlManager.baseUrl),
-				networkManager: NetworkManager()
+				networkManager: NetworkManager(),
+				socketManager: SocketEventManager()
 			),
 			delegate: self
 		)

@@ -1,3 +1,4 @@
 .DS_Store
 *.xcuserstate
 Course MaterialsUITests/Node_Server/node_modules/
+Course MaterialsUITests/Node_Server/responses/

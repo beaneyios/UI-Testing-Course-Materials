@@ -11,7 +11,7 @@ export default class WebsocketHandler {
 
 				console.log('WEBSOCKET: websocket called');
 				console.log(`WEBSOCKET: Sending message to ${request.body.channel}`);
-				console.log(`WEBSOCKET: Sending body ${JSON.stringify(request.body.content)}`);
+				console.log(`WEBSOCKET: Sending body ${JSON.stringify(request.body.content, null, 2)}`);
 				console.log(`WEBSOCKET: Sending to socket with ID ${socket.id}`)
 				socket.emit(request.body.channel, request.body.content);	
 			});
