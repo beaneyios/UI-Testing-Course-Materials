@@ -1,4 +1,6 @@
-# Real-world UI testing
+<img src="https://user-images.githubusercontent.com/37811466/224490695-8cc8a230-4ebc-4770-987a-b5e87b9061c3.png" width="300" height="300">
+
+# Real-world iOS UI testing
 
 ## Why this course?
 The iOS world is currently replete with courses. Among these are plenty of articles introducing developers to unit and UI testing on iOS.
@@ -27,7 +29,7 @@ For example, if you want to follow the tutorial for Chapter 8 and code it yourse
 ## Chapters
 ### Chapter 1 - Getting started with UI tests
 - Learn to expose your views to XCUITests with `accessibilityIdentifier`s.
-- Write a simple (but messy) series of UI tests for your views.
+- Write a simple (but messy) series of UI tests for your views using XCUI.
 
 ### Chapter 2 - Tidying up
 - Breaking out your tests into `Screens`, that allow re-usable interaction with your app.
