@@ -9,7 +9,8 @@ import XCTest
 
 final class LoginUITests: MockedUITests {
 
-    func testLogin() throws {
+	@MainActor
+    func testLogin() async throws {
 
 		/// Set up the application and launch it.
         let app = XCUIApplication()

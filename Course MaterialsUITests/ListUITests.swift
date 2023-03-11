@@ -9,6 +9,7 @@ import XCTest
 
 final class ListUITests: MockedUITests {
 
+	@MainActor
 	func testList() throws {
 		
 		self.recordMode = false

@@ -4,8 +4,8 @@ export default class FileUploader {
 
   writeFile(url, body) {
 
-    const urlWithoutHttp = replaceAll(url, "http://localhost.com:3000", "-");
-    const urlWithoutSlashes = replaceAll(urlWithoutHttp, "/", "-");
+    const urlWithoutHttp = this.replaceAll(url, "http://localhost.com:3000", "-");
+    const urlWithoutSlashes = this.replaceAll(urlWithoutHttp, "/", "-");
 
     const filePath = `responses/file${urlWithoutSlashes}.json`;
 

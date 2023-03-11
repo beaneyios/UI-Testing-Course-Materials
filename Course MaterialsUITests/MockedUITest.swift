@@ -6,42 +6,31 @@
 //
 
 import XCTest
-import Shock
 import iOSSnapshotTestCase
 
 class MockedUITests: FBSnapshotTestCase {
 	
-	var mockServer: MockServer!
-	
-	override func setUp() {
-		super.setUp()
-		self.mockServer = MockServer(
-			port: 9000,
-			bundle: Bundle(for: LoginUITests.self)
-		)
+	override func setUp() async throws {
 		
-		self.mockServer.start()
-		self.configureMocks()
+		try await self.configureMocks()
 	}
 	
-	func configureMocks() {
+	override func tearDown() async throws {
 		
-		let loginRoute: MockHTTPRoute = .simple(
-			method: .get,
-			urlPath: "/login.json",
-			code: 200,
-			filename: "login.json"
-		)
-				
-		let listRoute: MockHTTPRoute = .simple(
-			method: .get,
-			urlPath: "/movies.json",
-			code: 200,
-			filename: "movies.json"
+		try await MockServerHandler.cleanUp()
+	}
+	
+	func configureMocks() async throws {
+		
+		try await MockServerHandler.pushBody(
+			fixtureName: "login",
+			path: "login.json"
 		)
 		
-		self.mockServer.setup(route: loginRoute)
-		self.mockServer.setup(route: listRoute)
+		try await MockServerHandler.pushBody(
+			fixtureName: "movies",
+			path: "movies.json"
+		)
 	}
 }
 

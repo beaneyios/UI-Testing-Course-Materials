@@ -12,7 +12,7 @@ struct BaseUrlManager {
 	static var baseUrl: String {
 		
 		if UIApplication.shared.isRunningUITests {
-			return "http://localhost:9000"
+			return "http://localhost:3000"
 		} else {
 			return "https://beaneyios.github.io"
 		}

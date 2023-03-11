@@ -7,8 +7,8 @@ export default class FileFetcher {
     const url = req.protocol + '://' + req.get('host') + req.originalUrl;
     console.log(`GET: URL is ${url}`);
 
-    const urlWithoutHttp = replaceAll(url, "http://localhost:3000", "-");
-    const urlWithoutSlashes = replaceAll(urlWithoutHttp, "/", "-");
+    const urlWithoutHttp = this.replaceAll(url, "http://localhost:3000", "-");
+    const urlWithoutSlashes = this.replaceAll(urlWithoutHttp, "/", "-");
     const filePath = `responses/file${urlWithoutSlashes}.json`;
     console.log(`GET: Filepath is ${filePath}`);
 
