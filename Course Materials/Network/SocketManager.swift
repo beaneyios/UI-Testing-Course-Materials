@@ -7,6 +7,7 @@
 
 import Foundation
 import SocketIO
+import UIKit
 
 protocol SocketEventManagerDelegate: AnyObject {
 	
@@ -28,7 +29,11 @@ class SocketEventManager {
 			return
 		}
 		
-		let mockedSockets = true
+		// For reasons beyond my mobile-focussed mind, using websockets as the transport
+		// method for socketio doesn't work on a local server. So instead we need to defer to
+		// socketio's chosen implementation and force long polling instead of websockets.
+		// The behaviour is ultimately the same.
+		let mockedSockets = UIApplication.shared.isRunningUITests
 		
 		self.socketManager = SocketManager(
 			socketURL: baseUrl,
@@ -41,7 +46,7 @@ class SocketEventManager {
 			]
 		)
 		
-		self.socketManager?.defaultSocket.connect(timeoutAfter: 5.0) { [weak self] in
+		self.socketManager?.defaultSocket.connect(timeoutAfter: 5.0) {
 			print("Failed connection")
 		}
 		
