@@ -71,7 +71,9 @@ extension MockedUITests {
 		FBSnapshotVerifyView(
 			imageView,
 			identifier: "\(Self.self)-\(identifier)",
-			overallTolerance: 0.0
+			overallTolerance: 0.05,
+			file: file,
+			line: line
 		)
 	}
 }
