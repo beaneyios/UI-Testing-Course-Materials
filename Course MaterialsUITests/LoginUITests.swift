@@ -13,7 +13,7 @@ final class LoginUITests: XCTestCase {
 		
 		/// Set up the application and launch it.
         let app = XCUIApplication()
-        app.launch()
+        app.launchWithTestEnvironment()
 		
 		let loginScreen = LoginScreen(app: app)
 		loginScreen.login(username: "test@test.com", password: "testPassword123")

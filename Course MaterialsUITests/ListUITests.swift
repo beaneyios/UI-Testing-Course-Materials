@@ -13,7 +13,7 @@ final class ListUITests: XCTestCase {
 		
 		/// Set up the application and launch it.
 		let app = XCUIApplication()
-		app.launch()
+		app.launchWithTestEnvironment()
 		
 		// Create login screen and use it to login
 		let loginScreen = LoginScreen(app: app)
