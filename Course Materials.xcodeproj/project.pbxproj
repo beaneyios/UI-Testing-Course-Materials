@@ -27,6 +27,9 @@
 		E96253BD29B91F6B00ECEC5B /* XCUIElement+WaitForExistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96253BC29B91F6B00ECEC5B /* XCUIElement+WaitForExistence.swift */; };
 		E96253C029B922A000ECEC5B /* UIApplication+UITestingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96253BF29B922A000ECEC5B /* UIApplication+UITestingHelpers.swift */; };
 		E96253C229B922B800ECEC5B /* XCUIApplication+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96253C129B922B800ECEC5B /* XCUIApplication+Launch.swift */; };
+		E96C242029B924BE004E1720 /* Shock in Frameworks */ = {isa = PBXBuildFile; productRef = E96C241F29B924BE004E1720 /* Shock */; };
+		E96C242329B92577004E1720 /* login.json in Resources */ = {isa = PBXBuildFile; fileRef = E96C242229B92577004E1720 /* login.json */; };
+		E96C242529B92C31004E1720 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = E96C242429B92C31004E1720 /* movies.json */; };
 		E99C59CF29AFD97000173691 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59CE29AFD97000173691 /* Movie.swift */; };
 		E99C59D129AFD9B400173691 /* MovieListGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D029AFD9B400173691 /* MovieListGateway.swift */; };
 		E99C59D429AFD9F700173691 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C59D329AFD9F700173691 /* Endpoint.swift */; };
@@ -78,6 +81,8 @@
 		E96253BC29B91F6B00ECEC5B /* XCUIElement+WaitForExistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+WaitForExistence.swift"; sourceTree = "<group>"; };
 		E96253BF29B922A000ECEC5B /* UIApplication+UITestingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+UITestingHelpers.swift"; sourceTree = "<group>"; };
 		E96253C129B922B800ECEC5B /* XCUIApplication+Launch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Launch.swift"; sourceTree = "<group>"; };
+		E96C242229B92577004E1720 /* login.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = login.json; sourceTree = "<group>"; };
+		E96C242429B92C31004E1720 /* movies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 		E99C59CE29AFD97000173691 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		E99C59D029AFD9B400173691 /* MovieListGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListGateway.swift; sourceTree = "<group>"; };
 		E99C59D329AFD9F700173691 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
@@ -107,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96C242029B924BE004E1720 /* Shock in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +161,7 @@
 		E95D22C829AD475700D1E682 /* Course MaterialsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				E96C242129B9256C004E1720 /* Fixtures */,
 				E99C59FF29B28B8400173691 /* LoginUITests.swift */,
 				E962535629B2992F00ECEC5B /* ListUITests.swift */,
 				E962535829B29AA200ECEC5B /* DetailUITests.swift */,
@@ -278,6 +285,15 @@
 			path = Testing;
 			sourceTree = "<group>";
 		};
+		E96C242129B9256C004E1720 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				E96C242229B92577004E1720 /* login.json */,
+				E96C242429B92C31004E1720 /* movies.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		E99C59CD29AFD96300173691 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -367,6 +383,9 @@
 				E95D22C729AD475700D1E682 /* PBXTargetDependency */,
 			);
 			name = "Course MaterialsUITests";
+			packageProductDependencies = (
+				E96C241F29B924BE004E1720 /* Shock */,
+			);
 			productName = "Course MaterialsUITests";
 			productReference = E95D22C529AD475700D1E682 /* Course MaterialsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -399,6 +418,9 @@
 				Base,
 			);
 			mainGroup = E95D229C29AD475600D1E682;
+			packageReferences = (
+				E96C241E29B924BE004E1720 /* XCRemoteSwiftPackageReference "Shock" */,
+			);
 			productRefGroup = E95D22A629AD475600D1E682 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -425,6 +447,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96C242529B92C31004E1720 /* movies.json in Resources */,
+				E96C242329B92577004E1720 /* login.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,6 +767,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E96C241E29B924BE004E1720 /* XCRemoteSwiftPackageReference "Shock" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/justeat/Shock";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E96C241F29B924BE004E1720 /* Shock */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E96C241E29B924BE004E1720 /* XCRemoteSwiftPackageReference "Shock" */;
+			productName = Shock;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E95D229D29AD475600D1E682 /* Project object */;
 }
