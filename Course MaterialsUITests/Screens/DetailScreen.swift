@@ -34,7 +34,7 @@ class DetailScreen {
 	
 	func waitForScreen() {
 		
-		let listView = app.otherElements["com.uitest.detail.view"]
-		listView.waitForExistence(label: "Detail View")
+		let detailView = app.otherElements["com.uitest.detail.view"]
+		self.app.wait(for: detailView, label: "Detail View")
 	}
 }

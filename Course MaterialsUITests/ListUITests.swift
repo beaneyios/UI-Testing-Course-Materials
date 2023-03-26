@@ -11,6 +11,8 @@ final class ListUITests: MockedUITests {
 
 	func testList() throws {
 		
+		self.recordMode = false
+		
 		/// Set up the application and launch it.
 		let app = XCUIApplication()
 		app.launchWithTestEnvironment()
@@ -23,13 +25,6 @@ final class ListUITests: MockedUITests {
 		let listScreen = ListScreen(app: app)
 		listScreen.waitForScreen()
 		
-		let firstTitleViewFound = listScreen.findCell(titled: "Beetlejuice")
-		XCTAssertTrue(firstTitleViewFound)
-		
-		let secondTitleViewFound = listScreen.findCell(titled: "The Cotton Club")
-		XCTAssertTrue(secondTitleViewFound)
-		
-		let thirdTitleViewFound = listScreen.findCell(titled: "The Shawshank Redemption")
-		XCTAssertTrue(thirdTitleViewFound)
+		self.verify(identifier: "List-View", app: app)
 	}
 }

@@ -8,17 +8,19 @@
 import XCTest
 import Foundation
 
-extension XCUIElement {
+extension XCUIApplication {
 	
-	func waitForExistence(
+	func wait(
+		for element: XCUIElement,
 		label: String,
 		timeout: TimeInterval = 2.0,
 		file: StaticString = #file,
 		line: UInt = #line
 	) {
 		
-		if !self.waitForExistence(timeout: timeout) {
+		if !element.waitForExistence(timeout: timeout) {
 			XCTFail("Unable to find \(label)")
+			self.takeScreenshot(name: "could-not-find-element-\(label)")
 		}
 	}
 }
